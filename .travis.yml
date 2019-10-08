@@ -15,3 +15,8 @@ install:
   - ls -la
   - npm install
   - ls -la
+
+
+after_install:
+  # send an email after install completes
+  - echo "Sucessfully testing!!!" | mailx -s "Travis Testing" francis.victa@georgebrown.ca
