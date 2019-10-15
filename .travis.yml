@@ -7,7 +7,7 @@ node_js:
 cache: npm
 
 env:
-  - NOW_TOKEN=y21FXhM8D0bExKs9I01uMIr7
+  - $NOW_TOKEN=y21FXhM8D0bExKs9I01uMIr7
 
 before_install:
   - ls -la
