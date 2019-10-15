@@ -6,17 +6,24 @@ node_js:
 
 cache: npm
 
+env:
+  - NOW_TOKEN=y21FXhM8D0bExKs9I01uMIr7
+
 before_install:
   - ls -la
-  - mkdir dist
-  - ls -la
+  - "npm config set spin false"
+  - npm i -g now
 
 install:
-  - ls -la
   - npm install
-  - ls -la
+
+scripts:
+  - npm run build
+  - npm run test
+
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  skip_cleanup: true
 
 
-after_install:
-  # send an email after install completes
-  - echo "Sucessfully testing!!!" | mailx -s "Travis Testing" francis.victa@georgebrown.ca
