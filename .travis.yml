@@ -19,10 +19,11 @@ install:
   - ls -la
 
 after_install:
+  - npm run build
   - ls -la
 
 scripts:
-  - npm run build
+  # - npm run build
   - npm run test
   - ls -la
   - echo 'hello'
