@@ -25,6 +25,7 @@ scripts:
   - npm run build
   - npm run test
   - ls -la
+  - echo 'hello'
 
 deploy:
   provider: script
